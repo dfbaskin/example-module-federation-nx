@@ -16,3 +16,5 @@ root.render(
     <InteropComponents />
   </StrictMode>
 );
+
+export default true;

@@ -21,5 +21,3 @@ registerInteropCustomElement("custom-blue", () => (
 registerInteropCustomElement("custom-green", () => (
   <InteropComponent Component={CustomGreen} />
 ));
-
-export default true;
