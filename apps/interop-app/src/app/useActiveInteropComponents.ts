@@ -52,6 +52,7 @@ export function useActiveInteropComponents() {
     return [...activeComponents].map(([key, value]) => {
       return [key, ...value] as [string, React.ReactNode, InteropHTMLElement];
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
 
   return components;

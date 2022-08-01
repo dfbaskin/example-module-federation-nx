@@ -21,7 +21,7 @@ export function CustomGreen({ id, publishEvent }: Props) {
     return () => {
       removeComponent("green");
     };
-  }, []);
+  }, [addComponent, removeComponent]);
 
   const onClosePanel = () => {
     publishEvent(

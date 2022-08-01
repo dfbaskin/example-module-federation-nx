@@ -18,5 +18,5 @@ export function CustomElementRootPropsProvider({ current, children }: Props) {
 }
 
 export function useCustomElementRootProps<T extends Record<string, unknown>>() {
-  return useContext(ElementRootPropsContext);
+  return useContext(ElementRootPropsContext) as T;
 }
