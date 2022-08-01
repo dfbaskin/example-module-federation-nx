@@ -18,7 +18,8 @@
         "tsConfig": "apps/host-app/tsconfig.app.json",
         "assets": ["apps/host-app/src/favicon.ico", "apps/host-app/src/assets"],
         "styles": ["apps/host-app/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "webpackConfig": "apps/host-app/webpack.config.js"
       },
       "configurations": {
         "production": {
@@ -33,7 +34,8 @@
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,
-          "vendorChunk": false
+          "vendorChunk": false,
+          "webpackConfig": "apps/host-app/webpack.config.prod.js"
         }
       }
     },
