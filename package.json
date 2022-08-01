@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target serve --projects interop-app,host-app",
-    "build": "nx build",
+    "build": "nx run-many --target build --projects interop-app,host-app",
     "test": "nx test"
   },
   "private": true,
