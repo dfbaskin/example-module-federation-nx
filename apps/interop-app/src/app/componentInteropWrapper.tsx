@@ -34,13 +34,9 @@ export function registerInteropCustomElement(
 
     disconnectedCallback() {
       console.log(`Dismounting ${tagName} component (${this.id}).`);
-    }
-
-    override remove() {
       if (this.deregisterFromActiveInterop !== noop) {
         this.deregisterFromActiveInterop();
         this.deregisterFromActiveInterop = noop;
-        super.remove();
       }
     }
   }
