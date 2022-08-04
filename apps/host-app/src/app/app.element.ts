@@ -32,7 +32,6 @@ export class AppElement extends HTMLElement {
   }
 
   connectedCallback() {
-    const title = "webapp";
     this.innerHTML = `
     <div class="app-root">
       <h1>Web Application / React Portal Interop Example</h1>
@@ -43,6 +42,7 @@ export class AppElement extends HTMLElement {
             <button type="button" name="red">Add Red</button>
             <button type="button" name="blue">Add Blue</button>
             <button type="button" name="green">Add Green</button>
+            <button type="button" name="CLEAR">Clear</button>
           </div>
         </fieldset>
       </div>
@@ -75,7 +75,9 @@ export class AppElement extends HTMLElement {
 
   addElement = (evt: MouseEvent) => {
     const componentType = (evt.target as HTMLButtonElement | undefined)?.name;
-    if (componentType) {
+    if (componentType === "CLEAR") {
+      this.componentsList.innerHTML = "";
+    } else if (componentType) {
       const component = document.createElement(`custom-${componentType}`);
       component.id = nextComponentId();
       this.componentsList.appendChild(component);
